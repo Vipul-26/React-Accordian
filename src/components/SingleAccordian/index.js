@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './singleAccordian.css';
 
 const SingleAccordian = ({ question, answer }) => {
+
     const [show, setShow] = useState(false);
 
     return (
         <>
-            <div className="main-heading">
-                <p onClick={() => setShow(!show)}> {show ? "➖" : "➕"} </p>
-                <h3>{question}</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header" onClick={() => setShow(!show)}>
+                        {question}
+                    </div>
+                    {show &&
+                        <div class="accordion-item-body-content">
+                            {answer}
+                        </div>
+                    }
+                </div>
             </div>
-            {show && <p className="answers"> {answer} </p>}
         </>
     )
 }

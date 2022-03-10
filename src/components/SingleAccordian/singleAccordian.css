@@ -1,67 +1,63 @@
-.main-heading {
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
     display: flex;
-    margin-top: 30px;
-    padding: 20px;
-    background: #f1f4ff;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.main-heading:first-child {
-    margin-top: 0;
-}
-
-.main-heading h3 {
-    margin-left: 30px;
-    color: #303243;
-    font-family: 'Roboto', sans-serif;
-    word-spacing: 1px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.main-heading p {
+    align-items: center;
+    position: relative;
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-        rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    background: #fff;
-    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
 }
 
-.answers {
-    padding: 30px 20px 40px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    word-spacing: 2px;
-    font-weight: 400;
-    line-height: 1.7;
-    background: #fcf5f5;
-    color: rgb(40, 37, 53);
-    margin-top: 2px;
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .main-heading {
-        padding: 15px;
-    }
+.accordion-item-header.active::after {
+    content: "\2212";
 }
 
-@media screen and (max-width: 1023px) {
-    .main-heading {
-        padding: 15px;
-    }
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
-@media screen and (max-width: 767px) {
-    .main-heading h3 {
-        margin-left: 15px;
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+}
+
+@media(max-width:767px) {
+    html {
         font-size: 14px;
-    }
-
-    .main-heading p {
-        padding: 3px;
-        font-size: smaller;
     }
 }

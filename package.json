@@ -1,6 +1,12 @@
 {
   "name": "react-accordian",
   "version": "0.1.0",
+  "description": "React Accordian",
+  "keywords": [
+    "accordian",
+    "react",
+    "questionss"
+  ],
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
