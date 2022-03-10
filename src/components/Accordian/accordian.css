@@ -91,10 +91,18 @@
 
 .button:hover {
     color: #fff;
+    cursor: pointer;
 }
 
 .button:hover:before {
     width: 100%;
+}
+
+.disabled, .disabled::before, .disabled::after {
+    pointer-events: none !important;
+    cursor: default !important;
+    background-color: #d2d2d2 !important;
+    border-color: darkorchid !important;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {

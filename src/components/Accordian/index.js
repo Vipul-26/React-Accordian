@@ -40,10 +40,10 @@ const Accordian = () => {
             }
             {selected !== "Choose any topics" &&
                 <div className='pagination'>
-                    <button onClick={prev} className="button" disabled={currentPage <= 1}>
+                    <button onClick={prev} className={`${currentPage <= 1 ? 'disabled' : ''} button`}>
                         Prev
                     </button>
-                    <button onClick={next} className="button" disabled={currentPage >= 4}>
+                    <button onClick={next} className={`${currentPage >= 4 ? 'disabled' : ''} button`}>
                         Next
                     </button>
                 </div>
